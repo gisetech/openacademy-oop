@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:openacademy-oop}",
+            "name": "Debug openacademy-oop",
+            "target": "openacademy-oop",
+            "configuration": "debug",
+            "preLaunchTask": "swift: Build Debug openacademy-oop"
+        },
+        {
+            "type": "swift",
+            "request": "launch",
+            "args": [],
+            "cwd": "${workspaceFolder:openacademy-oop}",
+            "name": "Release openacademy-oop",
+            "target": "openacademy-oop",
+            "configuration": "release",
+            "preLaunchTask": "swift: Build Release openacademy-oop"
+        }
+    ]
+}

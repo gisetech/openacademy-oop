@@ -1,0 +1,11 @@
+{
+  "name": "Swift",
+  "image": "ghcr.io/swiftwasm/swift:latest",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "sswg.swift-lang"
+      ]
+    }
+  }
+}
