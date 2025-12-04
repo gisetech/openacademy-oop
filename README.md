@@ -2,8 +2,6 @@
 Repository from the course OOP with Swift
 
 ## Diagrama de Classes
-
-```mermaid
 classDiagram
     direction LR
 
@@ -90,16 +88,16 @@ classDiagram
     % Aluno usa Plano (Associação)
     Aluno --> Plano : -plano
 
-    % Aula usa Instrutor (Associação/Composição)
+    % Aula usa Instrutor (Associação)
     Aula --> Instrutor : -instrutor
 
-    % AulaPersonal usa Aluno (Composição)
+    % AulaPersonal usa Aluno (Associação)
     AulaPersonal --> Aluno : -aluno
 
-    % AulaColetiva usa Aluno (Composição)
+    % AulaColetiva usa Aluno (Associação)
     AulaColetiva --> Aluno : -alunosInscritos
 
-    % Academia gerencia coleções (Agregação/Composição)
+    % Academia gerencia coleções (Agregação)
     Academia "1" *-- "many" Aluno : -alunosMatriculados
     Academia "1" *-- "many" Instrutor : -instrutoresContratados
     Academia "1" *-- "many" Aparelho : -aparelhos
