@@ -6,6 +6,7 @@ class Aparelho: Manutencao{
     // Construtor da classe
     init(nomeItem: String){
         self.nomeItem = nomeItem
+        self.dataUltimaManutencao = ""
     }
 
     // Função retorna booleano a depender se a manutenção foi bem sucessida (true) ou não (false)

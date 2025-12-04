@@ -1,9 +1,11 @@
-public class AulaColetiva: Aula{
+@testable import Dia1
+
+class AulaColetiva: Aula{
     private (set) var alunosInscritos: [String: Aluno] = [:]
     let capacidadeMaxima: Int
 
     override init(nome: String, instrutor: Instrutor){
-        self.capacidadeMaxima = 2 // Para fins de teste
+        self.capacidadeMaxima = 25 
         super.init(nome: nome, instrutor: instrutor)
     }
 

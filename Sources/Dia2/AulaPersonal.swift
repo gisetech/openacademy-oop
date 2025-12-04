@@ -1,3 +1,5 @@
+@testable import Dia1
+
 class AulaPersonal: Aula{
     public let aluno: Aluno
 

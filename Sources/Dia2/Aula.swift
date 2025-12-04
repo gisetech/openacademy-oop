@@ -1,4 +1,6 @@
 // Definição da estrutura de aulas 
+@testable import Dia1
+
 class Aula {
     let nome: String
     var instrutor: Instrutor
