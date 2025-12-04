@@ -1,7 +1,7 @@
 import Foundation
-import Dia1
-import Dia2
-import Dia3 // Necessário para a classe Academia
+@testable import Dia1
+@testable import Dia2
+@testable import Dia3 // Necessário para a classe Academia
 
 func testDia3() {
     print("========================================")
