@@ -3,6 +3,7 @@ Repository from the course OOP with Swift
 
 ## Diagrama de Classes
 
+```mermaid
 classDiagram
     direction LR
 
