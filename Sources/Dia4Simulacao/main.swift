@@ -37,7 +37,7 @@ let instrutor2 = Instrutor(
 )
 academia.contratarInstrutor(instrutor: instrutor1)
 academia.contratarInstrutor(instrutor: instrutor2)
-print("✓ Instrutores contratados com sucesso!")
+print("Instrutores contratados com sucesso!")
 
 
 // 4. Matrícula de Alunos
@@ -54,7 +54,7 @@ let alunoB = academia.matricularAluno(
     matricula: "A002",
     plano: planoAnual
 )
-print("✓ Dois alunos matriculados!")
+print("Dois alunos matriculados!")
 
 // 5. Criação e Agendamento de Aulas
 print("\n[5] Criando e agendando aulas...")
@@ -133,7 +133,7 @@ print("\n" + String(repeating: "=", count: 60))
 print("[9] RELATÓRIO FINAL DA ACADEMIA")
 print(String(repeating: "=", count: 60))
 let relatorio = academia.gerarRelatorio()
-print("\n📊 Estatísticas da Academia POO 360:")
+print("\n Estatísticas da Academia POO 360:")
 print("   • Total de Alunos: \(relatorio.totalAlunos)")
 print("   • Total de Instrutores: \(relatorio.totalInstrutores)")
 print("   • Total de Aulas: \(relatorio.totalAulas)")

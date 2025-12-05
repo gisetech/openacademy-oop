@@ -21,17 +21,17 @@ class Academia {
     
     func adicionarAparelho(aparelho: Aparelho) { 
         aparelhos.append(aparelho)
-        print("⚙️ Aparelho '\(aparelho.nomeItem)' adicionado à lista de inventário.")
+        print("Aparelho '\(aparelho.nomeItem)' adicionado à lista de inventário.")
     }
 
     func adicionarAula(aula: Aula) { 
         aulasDisponiveis.append(aula)
-        print("📖 Aula '\(aula.nome)' adicionada à grade de horários.")
+        print("Aula '\(aula.nome)' adicionada à grade de horários.")
     }
 
    func contratarInstrutor(instrutor: Instrutor) { 
         instrutoresContratados[instrutor.email] = instrutor
-        print("👤 Instrutor \(instrutor.nome) contratado com sucesso. Email: \(instrutor.email).")
+        print("Instrutor \(instrutor.nome) contratado com sucesso. Email: \(instrutor.email).")
     }
 
     // MARK: - Matrícula de Alunos (Sobrecarga de Métodos) 
@@ -41,11 +41,11 @@ class Academia {
         // 1. Verifique se a matrícula já existe 
         if alunosMatriculados[aluno.matricula] != nil {
             // 2. Imprima uma mensagem de erro específica 
-            print("🚫 Erro de Matrícula: Aluno com matrícula \(aluno.matricula) já existe.")
+            print("Erro de Matrícula: Aluno com matrícula \(aluno.matricula) já existe.")
         } else {
             // 3. Adicione o aluno e imprima sucesso 
             alunosMatriculados[aluno.matricula] = aluno
-            print("🎉 Aluno \(aluno.nome) matriculado com sucesso! Matrícula: \(aluno.matricula).")
+            print("Aluno \(aluno.nome) matriculado com sucesso! Matrícula: \(aluno.matricula).")
         }
     }
     
