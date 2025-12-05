@@ -12,24 +12,24 @@ class Academia {
     private var aparelhos: [Aparelho] = [] // Array de Aparelhos 
     private var aulasDisponiveis: [Aula] = [] // Array de Aulas 
 
-    public init(nome: String) { 
+    init(nome: String) { 
         self.nome = nome 
         print("Sistema da Academia '\(nome)' inicializado.")
     }
 
     // MARK: - Métodos de Gerenciamento (Adicionar/Contratar)
     
-    public func adicionarAparelho(aparelho: Aparelho) { 
+    func adicionarAparelho(aparelho: Aparelho) { 
         aparelhos.append(aparelho)
         print("⚙️ Aparelho '\(aparelho.nomeItem)' adicionado à lista de inventário.")
     }
 
-    public func adicionarAula(aula: Aula) { 
+    func adicionarAula(aula: Aula) { 
         aulasDisponiveis.append(aula)
         print("📖 Aula '\(aula.nome)' adicionada à grade de horários.")
     }
 
-    public func contratarInstrutor(instrutor: Instrutor) { 
+   func contratarInstrutor(instrutor: Instrutor) { 
         instrutoresContratados[instrutor.email] = instrutor
         print("👤 Instrutor \(instrutor.nome) contratado com sucesso. Email: \(instrutor.email).")
     }
@@ -37,7 +37,7 @@ class Academia {
     // MARK: - Matrícula de Alunos (Sobrecarga de Métodos) 
     
     // 1. Primeiro Método (Principal) 
-    public func matricularAluno(aluno: Aluno) { 
+    func matricularAluno(aluno: Aluno) { 
         // 1. Verifique se a matrícula já existe 
         if alunosMatriculados[aluno.matricula] != nil {
             // 2. Imprima uma mensagem de erro específica 
@@ -50,7 +50,7 @@ class Academia {
     }
     
     // 2. Segundo Método (Conveniência) 
-    public func matricularAluno(nome: String, email: String, matricula: String, plano: Plano) -> Aluno { 
+    func matricularAluno(nome: String, email: String, matricula: String, plano: Plano) -> Aluno { 
         // 1. Crie uma nova instância da classe Aluno 
         let novoAluno = Aluno(nome: nome, email: email, matricula: matricula, plano: plano)
         
@@ -68,7 +68,7 @@ class Academia {
         return alunosMatriculados[matricula] // Retorna Aluno ou nil se não encontrado 
     }
     
-    public func listarAlunos() { 
+    func listarAlunos() { 
         print("\n--- Lista de Alunos Matriculados em \(nome) ---") 
         
         if alunosMatriculados.isEmpty {
@@ -86,7 +86,7 @@ class Academia {
         print("-------------------------------------------\n") 
     }
     
-    public func listarAulas() {
+    func listarAulas() {
         print("\n--- Lista de Aulas Disponíveis em \(nome) ---")
         
         if aulasDisponiveis.isEmpty {
@@ -107,7 +107,7 @@ class Academia {
 extension Academia {
     
     // Retorna uma tupla nomeada 
-    public func gerarRelatorio() -> (totalAlunos: Int, totalInstrutores: Int, totalAulas: Int) { 
+    func gerarRelatorio() -> (totalAlunos: Int, totalInstrutores: Int, totalAulas: Int) { 
         
         // Retorna a contagem das propriedades 
         return (

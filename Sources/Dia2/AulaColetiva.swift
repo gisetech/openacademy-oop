@@ -2,10 +2,10 @@
 
 class AulaColetiva: Aula{
     private (set) var alunosInscritos: [String: Aluno] = [:]
-    let capacidadeMaxima: Int
+    var capacidadeMaxima: Int
 
-    override init(nome: String, instrutor: Instrutor){
-        self.capacidadeMaxima = 25 
+    init(nome: String, instrutor: Instrutor, capacidadeMaxima: Int = 25) {
+        self.capacidadeMaxima = capacidadeMaxima
         super.init(nome: nome, instrutor: instrutor)
     }
 
@@ -25,7 +25,7 @@ class AulaColetiva: Aula{
         return false
     }
 
-    public override func getDescricao() -> String {
+    override func getDescricao() -> String {
         let descricaoBase = super.getDescricao()
         let vagasOcupadas = alunosInscritos.count
         
